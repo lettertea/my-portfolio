@@ -1,0 +1,20 @@
+.table {
+  font-family: "Open Sans", sans-serif;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.header, .row {
+  display: flex;
+}
+.header div, .row div {
+  flex: 1;
+  padding: 0.2rem 0.4em;
+  border: 1px solid #eeeeee;
+}
+.header {
+  background-color: #eeeeee;
+}
+.header div {
+  cursor: pointer;
+}
