@@ -2,14 +2,14 @@ import React from "react";
 import projects from "./projects";
 import "./styles.css"
 
-const Row = ({title, type, description, sourceUrl, score}) => (
-  <div className="row">
-    <div>{title}</div>
-    <div>{type}</div>
-    <div>{description}</div>
-    <div><a href={sourceUrl} target="_blank" rel="noopener noreferrer">{sourceUrl}</a></div>    
-    <div>{score}</div>    
-  </div>
+const Row = ({title, type, description, source, score}) => (
+  <tr id="data-row">
+    <td>{title}</td>
+    <td>{type}</td>
+    <td>{description}</td>
+    <td><a href={source} target="_blank" rel="noopener noreferrer">{source}</a></td>    
+    <td>{score}</td>    
+  </tr>
 );
 
 class Projects extends React.Component {
@@ -54,17 +54,17 @@ class Projects extends React.Component {
     const rows = this.state.data.map( (rowData) => <Row {...rowData} />);
 
     return (
-      <div className="table">
-        <div className="header">
-          <div onClick={() => this.sortBy('title')} >Title</div>
-          <div onClick={() => this.sortBy('type')}>Type</div>
-          <div onClick={() => this.sortBy('description')}>Description</div>
-          <div onClick={() => this.sortBy('liveDemo')}>Live Demo</div>
-          <div onClick={() => this.sortBy('score')}>Pride Score</div>
-        </div>
-        <div className="body">
+      <div id="table-container">
+      <table>
+        <tr id="header">
+          <th onClick={() => this.sortBy('title')} >Title</th>
+          <th onClick={() => this.sortBy('type')}>Type</th>
+          <th onClick={() => this.sortBy('description')}>Description</th>
+          <th onClick={() => this.sortBy('source')}>Source</th>
+          <th onClick={() => this.sortBy('score')}>Pride Score</th>
+        </tr>
           {rows}
-        </div>
+      </table>
       </div>
     );
     

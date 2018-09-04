@@ -1,20 +1,35 @@
-.table {
-  font-family: "Open Sans", sans-serif;
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
+#table-container {
 }
-.header, .row {
-  display: flex;
+
+table {
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 3px #aaa;
+  -moz-box-shadow: 0 3px 3px #aaa;
+  box-shadow: 0 3px 3px #aaa;
+  width: 100%;
 }
-.header div, .row div {
-  flex: 1;
-  padding: 0.2rem 0.4em;
-  border: 1px solid #eeeeee;
+
+#data-row:hover {
+  background: #eee;
 }
-.header {
-  background-color: #eeeeee;
-}
-.header div {
+
+#header th:hover {
   cursor: pointer;
+    background: #eee;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 12px;
+}
+
+td {
+  border-top: 1px solid #ccc;
+}
+
+th {
+  border-bottom: 1px double #ccc;
 }
