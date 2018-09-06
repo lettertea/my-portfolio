@@ -7,8 +7,7 @@ import About from "../about";
 import "./styles.css";
 
 const App = () => (
-  <div>
-    <span className="decor" />
+  <div id="body">
     <nav>
       <div className="container">
         <NavLink exact activeClassName='active-link' to="/" className="navbar-link">
