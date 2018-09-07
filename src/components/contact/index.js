@@ -17,7 +17,7 @@ const Contacts = () => (
 				<textarea name="message" required="true" />
 			</div>
 		</form>
-		<hr /> <button id="save">Save</button>
+		<hr /> <button id="form-submit">Submit</button>
 	</div>
 );
 

@@ -5,7 +5,8 @@
   justify-content: space-between;
 }
 
-.form-row-container input, textarea {
+.form-row-container input,
+.form-row-container textarea {
   width: 80%;
   border: 2px solid #ccc;
   border-radius: 3px;
@@ -13,7 +14,7 @@
   margin: 10px;
 }
 
-button {
+#form-submit {
   display: inline-block;
   padding: 10px 16px;
   cursor: pointer;
@@ -26,11 +27,11 @@ button {
   margin: 10px 0;
 }
 
-button:hover {
+#form-submit:hover {
   background-color: #0086b3;
 }
 
-button:active {
+#form-submit:active {
   background-color: #007099;
   box-shadow: 0 2px #666;
   transform: translateY(3px);
