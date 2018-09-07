@@ -1,3 +1,8 @@
+#intro {
+  font-size: 110%;
+  margin: 20px 0;
+}
+
 table {
   border-spacing: 0;
   border: 1px solid #ddd;
