@@ -3,7 +3,7 @@ import { Route, NavLink } from "react-router-dom";
 import Home from "../home";
 import Projects from "../projects";
 import Blog from "../blog";
-import About from "../about";
+import Contacts from "../../components/contact";
 import "./styles.css";
 
 const App = () => (
@@ -19,8 +19,8 @@ const App = () => (
         <NavLink activeClassName='active-link' to="/blog" className="navbar-link">
           Blog
         </NavLink>
-        <NavLink activeClassName='active-link' to="/about" className="navbar-link">
-          About
+        <NavLink activeClassName='active-link' to="/contacts" className="navbar-link">
+          Contacts
         </NavLink>
       </div>
     </nav>
@@ -29,7 +29,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/blog" component={Blog} />
-      <Route exact path="/about" component={About} />
+      <Route exact path="/contacts" component={Contacts} />
     </main>
   </div>
 );
