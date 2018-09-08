@@ -61,9 +61,8 @@ class Projects extends React.Component {
       <div>
         <h2>Introduction</h2>
         <div id="intro">
-          I'm a CS student named Thomas that tries to do web development. I've
-          been doing my projects purely on the front-end recently, so I'm
-          thinking about branching out to the back-end.
+          My name Thomas Le, and I am studying computer science at university. I've mostly done front-end development,
+          so in the future, I plan to try some more back-end development.
         </div>
         <h2>Projects</h2>
         <div id="table-container">
