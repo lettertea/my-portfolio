@@ -2,7 +2,7 @@ import React from "react";
 import projects from "./projects";
 import "./styles.css";
 
-const Row = ({ title, type, description, source, score }) => (
+const ProjectRow = ({ title, type, description, source, score }) => (
   <tr id="data-row">
     <td>{title}</td>
     <td>{type}</td>
@@ -20,7 +20,7 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: projects
+      projects: projects
     };
 
     this.compareBy.bind(this);
@@ -44,18 +44,18 @@ class Projects extends React.Component {
   }
 
   sortBy(key) {
-    let arrayCopy = [...this.state.data];
+    let arrayCopy = [...this.state.projects];
     if (this.state.recentlySorted === key) {
       console.log("hi");
       arrayCopy.reverse();
     } else {
       arrayCopy.sort(this.compareBy(key));
     }
-    this.setState({ data: arrayCopy, recentlySorted: key });
+    this.setState({ projects: arrayCopy, recentlySorted: key });
   }
 
   render() {
-    const rows = this.state.data.map(rowData => <Row {...rowData} />);
+    const projectRows = this.state.projects.map(project => <ProjectRow {...project} />);
 
     return (
       <div>
@@ -74,7 +74,7 @@ class Projects extends React.Component {
               <th onClick={() => this.sortBy("source")}>Source</th>
               <th onClick={() => this.sortBy("score")}>Pride Score</th>
             </tr>
-            {rows}
+            {projectRows}
           </table>
         </div>
       </div>
