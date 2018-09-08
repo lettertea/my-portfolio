@@ -1,20 +1,7 @@
 import React from "react";
 import projects from "./projects";
+import ProjectRow from "./ProjectRow";
 import "./styles.css";
-
-const ProjectRow = ({ title, type, description, source, score }) => (
-  <tr id="data-row">
-    <td>{title}</td>
-    <td>{type}</td>
-    <td>{description}</td>
-    <td>
-      <a href={source} target="_blank" rel="noopener noreferrer">
-        {source}
-      </a>
-    </td>
-    <td>{score}</td>
-  </tr>
-);
 
 class Projects extends React.Component {
   constructor(props) {
