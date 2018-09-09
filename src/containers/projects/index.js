@@ -31,14 +31,13 @@ class Projects extends React.Component {
   }
 
   sortBy(key) {
-    let arrayCopy = [...this.state.projects];
+    let projectsCopy = [...this.state.projects];
     if (this.state.recentlySorted === key) {
-      console.log("hi");
-      arrayCopy.reverse();
+      projectsCopy.reverse();
     } else {
-      arrayCopy.sort(this.compareBy(key));
+      projectsCopy.sort(this.compareBy(key));
     }
-    this.setState({ projects: arrayCopy, recentlySorted: key });
+    this.setState({ projects: projectsCopy, recentlySorted: key });
   }
 
   render() {
